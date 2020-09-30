@@ -5,12 +5,15 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
+    <a href="/new">New message</a>
     <h1><%=title%></h1>
     <ul>
       <% for(const msg of messages) {%>
-      <li><%=msg.user%></li>
-      <li><%=msg.text%></li>
-      <li><%=msg.added%></li>
+      <li>
+        <div><sub><%=msg.added%></sub></div>
+        <div><strong><%=msg.user%></strong></div>
+        <%=msg.text%>
+      </li>
       <% } %>
     </ul>
   </body>
