@@ -10,7 +10,7 @@
     <ul>
       <% for(const msg of messages) {%>
       <li>
-        <div><sub><%=msg.added%></sub></div>
+        <div><sub><%=format(msg.added, {addSuffix: true})%></sub></div>
         <div><strong><%=msg.user%></strong></div>
         <%=msg.text%>
       </li>
